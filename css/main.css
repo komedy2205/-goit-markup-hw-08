@@ -323,7 +323,7 @@ header {
   .mail-links__mobile {
     display: block;
     width: 430px;
-    height: 300px;
+    height: auto;
   }
 }
 
@@ -378,7 +378,7 @@ header {
   display: block;
 }
 
-@media screen and (min-width: 0px) and (min-width: 767px) {
+@media screen and (min-width: 0px) and (max-width: 767px) {
   .mail-links-tablet {
     display: none;
   }
@@ -401,11 +401,12 @@ header {
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .telephone {
     display: block;
-    width: 100%;
+    width: 296px;
     font-weight: 500;
     font-size: 34px;
     line-height: 40px;
     letter-spacing: 0.02em;
+    margin-top: 302px;
     margin-left: 40px;
     padding: 0px;
     color: #2196f3;
@@ -448,6 +449,8 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
+    width: 480px;
+    height: 796px;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.2);
     transition-property: opacity;

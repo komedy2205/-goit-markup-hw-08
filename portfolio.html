@@ -13,48 +13,58 @@
     <body>
     <header class="header">
         <div class="container">
-        <nav>
-            <a class="webstudio" href="index.html">
-                <span class="web">Web</span>Studio
-            </a>
-            <button type="button" class="menu-button" aria-expanded="false" data-modal-open>
-                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                    <use class="icon-menu" href="./img/symbol-defs.svg#icon-menu_24px"></use>
-                </svg>
-            </button>
-            <div class="backdrop-mobile is-hidden" data-modal>
-                <div class="modal-mobile">
-                    <button class="menu-button-close" data-modal-close>
-                        <svg width="40" height="40">
-                            <use class="icon-cross" href="./img/symbol-defs.svg#icon-close_24px"></use>
-                        </svg>
-                    </button>
-                    <div class="mobile-menu">
-                        <ul class="nav-links">
-                            <li class="item"><a class="link-studio" href="./index.html">Студия</a></li>
-                            <li class="item"><a class="current active" href="./portfolio.html">Портфолио</a></li>
-                            <li class="item"><a class="link-contacts" href="#">Контакты</a></li>
-                        </ul>
-                    </div>
+            <nav class="navigation">
+                <a class="webstudio" href="./index.html">
+                    <span class="web">Web</span>Studio
+                </a>
+                <button type="button" class="menu-button" aria-expanded="false" data-modal-open>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="icon-menu" href="./img/symbol-defs.svg#icon-menu_24px"></use>
+                    </svg>
+                </button>
+                <div class="backdrop-mobile is-hidden" data-modal>
+                    <div class="modal-mobile">
+                        <button class="menu-button-close" data-modal-close>
+                            <svg width="40" height="40">
+                                <use class="icon-cross" href="./img/symbol-defs.svg#icon-close_24px"></use>
+                            </svg>
+                        </button>
+                        <div class="mobile-menu">
+                            <ul class="nav-links">
+                                <li class="item"><a class="link-studio" href="./index.html">Студия</a></li>
+                                <li class="item"><a class="current active" href="./portfolio.html">Портфолио</a></li>
+                                <li class="item"><a class="link-contacts" href="#">Контакты</a></li>
+                            </ul>
+                            <ul class="mail-links__mobile">
+                                <li><a class="telephone" href="+380961111111">
+                                        +38 096 111 11 11
+                                    </a></li>
+                                <li><a class="mail" href="info@devstudio.com">
+                                        info@devstudio.com
+                                    </a></li>
+                            </ul>
                         </div>
+    
                     </div>
-                        <ul class="nav-links-tablet">
-                            <li class="item"><a class="link-studio" href="./index.html">Студия</a></li>
-                            <li class="item"><a class="current active" href="./portfolio.html">Портфолио</a></li>
-                            <li class="item"><a class="link-contacts" href="#">Контакты</a></li>
-                        </ul>
+                </div>
+                <ul class="nav-links-tablet">
+                    <li class="item"><a class="link-studio" href="./index.html">Студия</a></li>
+                    <li class="item"><a class="current active" href="./portfolio.html">Портфолио</a></li>
+                    <li class="item"><a class="link-contacts" href="#">Контакты</a></li>
+                </ul>
             </nav>
-            <ul class="mail-links">
-                <li><a class="mail" href="info@devstudio.com">
-                    <svg class="mail-icon" width="16" height="12">
-                        <use href="./img/symbol-defs.svg#icon-envelope"></use>
-                    </svg>
-                        info@devstudio.com</a></li>
-                <li><a class="telephone" href="+380961111111">
-                    <svg class="mail-icon" width="10" height="16">
-                        <use href="./img/symbol-defs.svg#icon-Vector"></use>
-                    </svg>
-                    +38 096 111 11 11</a></li>
+            <ul class="mail-links-tablet">
+                <li><a class="mail-tablet" href="info@devstudio.com">
+                        <svg class="mail-icon-tablet" width="16" height="12">
+                            <use href="./img/symbol-defs.svg#icon-envelope"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a></li>
+                <li><a class="telephone-tablet" href="+380961111111">
+                        <svg class="mail-icon-tablet" width="10" height="16">
+                            <use href="./img/symbol-defs.svg#icon-Vector"></use>
+                        </svg>
+                        +38 096 111 11 11</a></li>
             </ul>
         </div>
     </header>
@@ -268,6 +278,7 @@
                     </svg>
                 </button>
             </div>
+        </div>
         </div>
     </footer>
     <script src="./js/modal.js"></script>

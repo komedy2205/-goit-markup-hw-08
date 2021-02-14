@@ -351,7 +351,7 @@ header {
     display: block;
 
     width: 430px;
-    height: 300px;
+    height: auto;
   }
 }
 
@@ -442,6 +442,7 @@ header {
     line-height: 40px;
     letter-spacing: 0.02em;
 
+    margin-top: 302px;
     margin-left: 40px;
 
     padding: 0px;
@@ -490,6 +491,9 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
+
+    width: 480px;
+    height: 796px;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.2);
     transition-property: opacity;
