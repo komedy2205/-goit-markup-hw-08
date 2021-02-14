@@ -449,6 +449,13 @@ header {
       margin-left: auto;
       margin-right: 15px;
     }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-left: auto;
+
+      display: block;
+      display: flex;
+    }
   }
 
   &:hover,
@@ -781,7 +788,7 @@ header {
 
   @media screen and (min-width: $desktop-width) {
     display: block;
-    max-width: 1600px;
+    width: 1600px;
     height: 600px;
 
     padding-top: 200px;
@@ -794,12 +801,13 @@ header {
       ),
       url("../img/Hero-desktop.jpg");
     background-color: $hero-backgroundcolor;
-  }
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    .hero {
-      background-image: url("../img/Hero-desktop@2x.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      .hero {
+        background-image: url("../img/Hero-desktop@2x.jpg");
+      }
     }
   }
 }
@@ -813,7 +821,7 @@ header {
 }
 
 .big-title {
-  width: 696px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -850,6 +858,11 @@ header {
   }
 
   @media screen and (min-width: $desktop-width) {
+    width: 696px;
+    padding-top: 0px;
+
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
     text-align: center;
 
@@ -864,7 +877,19 @@ header {
 
 .service-button {
   @media screen and (min-width: $mobile-width) {
-    margin: 0 140px;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    left: 700px;
+    top: 430px;
+
+    border-radius: 4px;
+    border-color: $sec-backgroundcolor;
+
+    background-color: $sec-backgroundcolor;
+    color: $sec-text-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -872,19 +897,21 @@ header {
     margin-right: auto;
   }
 
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-  height: 50px;
-  left: 700px;
-  top: 430px;
+  @media screen and (min-width: $desktop-width) {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    left: 700px;
+    top: 430px;
 
-  border-radius: 4px;
-  border-color: $sec-backgroundcolor;
+    border-radius: 4px;
+    border-color: $sec-backgroundcolor;
 
-  background-color: $sec-backgroundcolor;
-  color: $sec-text-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: $sec-backgroundcolor;
+    color: $sec-text-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 
   & {
     cursor: pointer;
@@ -987,6 +1014,11 @@ header {
       width: 354px;
       padding-left: 15px;
     }
+
+    @media screen and (min-width: $tablet-width) {
+      width: 270px;
+      padding-left: 0px;
+    }
   }
 
   &-li::before {
@@ -1056,7 +1088,9 @@ header {
   @media screen and (min-width: $desktop-width) {
     &-item {
       display: flex;
-      width: 1170px;
+      flex-wrap: wrap;
+      flex-basis: (100% / 4);
+      justify-content: center;
 
       list-style: none;
     }
@@ -1337,6 +1371,17 @@ header {
       flex-basis: (100% / 2);
       justify-content: center;
     }
+
+    @media screen and (min-width: $desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 0px;
+      padding: 0px;
+      list-style: none;
+
+      flex-basis: (100% / 4);
+      justify-content: center;
+    }
   }
 
   &-li {
@@ -1369,6 +1414,7 @@ header {
       flex-basis: calc(100% / 4 - 30px);
 
       margin-right: 30px;
+      margin-left: 0px;
     }
   }
 }
@@ -1606,6 +1652,9 @@ header {
 // Footer
 
 footer {
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+  }
   background-color: $hero-backgroundcolor;
 
   padding-top: 60px;
@@ -1614,6 +1663,17 @@ footer {
   &-all {
     @media screen and (min-width: $mobile-width) {
       margin-left: auto;
+      display: flex;
+      align-items: baseline;
+
+      width: 480px;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media screen and (min-width: $desktop-width) {
       display: flex;
       align-items: baseline;
 
@@ -1627,8 +1687,10 @@ footer {
 }
 
 .footer-tablet {
-  display: flex;
-  justify-content: center;
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .container-footer {
@@ -1643,6 +1705,7 @@ footer {
   @media screen and (min-width: $desktop-width) {
     width: 231px;
     margin-right: 70px;
+    margin-left: 200px;
   }
 }
 
@@ -1794,7 +1857,9 @@ footer {
       margin-bottom: 0px;
     }
 
-    margin-right: 90px;
+    @media screen and (min-width: $desktop-width) {
+      margin-right: 90px;
+    }
   }
   &-container > ul {
     display: flex;
@@ -1871,6 +1936,12 @@ footer {
 
 // Subscribe
 
+.sub {
+  @media screen and (min-width: $desktop-width) {
+    width: 570px;
+  }
+}
+
 .subscribe-container {
   @media screen and (min-width: $desktop-width) {
     display: flex;
@@ -1894,16 +1965,22 @@ footer {
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    color: $sec-text-color;
   }
+  @media screen and (min-width: $desktop-width) {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $sec-text-color;
 
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $sec-text-color;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: auto;
 
-  margin-bottom: 20px;
+    justify-content: start;
+  }
 }
 
 .subscribe-form {
@@ -1912,19 +1989,29 @@ footer {
     width: 450px;
     justify-content: center;
 
+    width: 358px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: $hero-backgroundcolor;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: $main-backgroundcolor;
+
     margin-left: auto;
     margin-right: auto;
 
     margin-bottom: 20px;
   }
-  width: 358px;
-  height: 50px;
-  border-radius: 4px;
-  background-color: $hero-backgroundcolor;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: $main-backgroundcolor;
+  @media screen and (min-width: $desktop-width) {
+    width: 358px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: $hero-backgroundcolor;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: $main-backgroundcolor;
 
-  padding-left: 16px;
+    padding-left: 16px;
+    margin-right: 12px;
+  }
 }
 
 .subscribe-button {
@@ -1934,18 +2021,33 @@ footer {
 
     margin-left: auto;
     margin-right: auto;
+
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    border-radius: 4px;
+    border-color: $sec-backgroundcolor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    background-color: $sec-backgroundcolor;
   }
-  display: flex;
-  width: 200px;
-  height: 50px;
-  align-items: center;
-  border-radius: 4px;
-  border-color: $sec-backgroundcolor;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  margin-left: 12px;
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    border-radius: 4px;
+    border-color: $sec-backgroundcolor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  background-color: $sec-backgroundcolor;
+    margin-left: 12px;
+
+    background-color: $sec-backgroundcolor;
+
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
   &__text {
     font-weight: 700;
