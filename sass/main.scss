@@ -346,6 +346,15 @@ header {
   font-style: 20px;
 }
 
+.mail-links__mobile {
+  @media screen and (min-width: $tablet-width) {
+    display: block;
+
+    width: 430px;
+    height: 300px;
+  }
+}
+
 .mail-links {
   @media screen and (min-width: $desktop-width) {
     margin-left: auto;
@@ -358,7 +367,16 @@ header {
 
 .mail {
   @media screen and (min-width: 0px) and (max-width: 767px) {
-    display: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+
+    width: 232px;
+
+    margin-left: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -388,6 +406,16 @@ header {
     padding-top: 32px;
   }
 
+  &-links__mobile > li {
+    display: block;
+  }
+
+  &-links-tablet {
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      display: none;
+    }
+  }
+
   &:hover,
   &:focus {
     color: $sec-backgroundcolor;
@@ -406,7 +434,18 @@ header {
 
 .telephone {
   @media screen and (min-width: 0px) and (max-width: 767px) {
-    display: none;
+    display: block;
+    width: 296px;
+
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+
+    margin-left: 40px;
+
+    padding: 0px;
+    color: $sec-backgroundcolor;
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -742,18 +781,31 @@ header {
 // buttons-portfolio
 
 .buttons-list {
-  display: flex;
-  justify-content: center;
-
-  margin-top: 94px;
-  margin-bottom: 50px;
-
   & > li:not(:last-child) {
     margin-right: 8px;
+  }
+
+  @media screen and (min-width: $mobile-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-left: 15px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 94px;
+    margin-bottom: 50px;
   }
 }
 
 .but-active {
+  @media screen and (min-width: $mobile-width) {
+    margin-bottom: 15px;
+  }
+
   border: 2px solid transparent;
   border-radius: 4px;
   padding: 6px 24px;
@@ -937,8 +989,167 @@ header {
 // what-doing
 
 .what-doing {
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 0px) and (max-width: 767px) {
     display: none;
+  }
+
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.sec-title {
+  text-align: center;
+  margin-bottom: 50px;
+
+  text-align: center;
+  color: $main-text-color;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.job {
+  @media screen and (min-width: $mobile-width) {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+
+  margin-left: 0px;
+  padding: 0;
+  list-style: none;
+}
+
+.job-kind {
+  @media screen and (min-width: $mobile-width) {
+    width: 450px;
+  }
+
+  border: 1px solid #eeeeee;
+
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &-overlay {
+    @media screen and (min-width: $mobile-width) {
+      width: 100%;
+      height: auto;
+    }
+
+    position: relative;
+
+    width: 370px;
+    overflow: hidden;
+  }
+}
+
+.img-overlay::before {
+  position: absolute;
+  content: "";
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $sec-backgroundcolor;
+  opacity: 0;
+  transform: translateY(100%);
+  transition-property: transform opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-overlink {
+  position: absolute;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  transform: translateY(100%);
+  transition-property: transform opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 322px;
+  height: 168px;
+  top: 63px;
+  left: 24px;
+  color: $main-backgroundcolor;
+  opacity: 0;
+}
+
+.job-link:focus,
+.job-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
+.job-link:hover .text-overlink,
+.job-link:focus .text-overlink {
+  transform: translateY(0);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.job-link:focus .img-overlay::before,
+.job-link:hover .img-overlay::before {
+  transform: translateY(0);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.job-kind:hover .text-overlink,
+.job-kind:focus .text-overlink {
+  transform: translateY(0);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.job-kind:focus .img-overlay::before,
+.job-kind:hover .img-overlay::before {
+  transform: translateY(0);
+
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.job-kind:nth-child(3n) {
+  margin-right: 0;
+}
+
+.job-kind .container > .description-item {
+  display: flex;
+}
+
+.last {
+  margin-bottom: 0px;
+}
+
+.our-job {
+  text-align: left;
+  padding: 20px 24px;
+}
+
+.poster-name {
+  color: $main-text-color;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  line-height: 36px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  &-descr {
+    line-height: 30px;
+
+    text-align: left;
+    margin-top: 4px;
   }
 }
 
@@ -1483,6 +1694,13 @@ footer {
     margin-right: auto;
 
     margin-bottom: 20px;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
   }
 
   font-weight: bold;
