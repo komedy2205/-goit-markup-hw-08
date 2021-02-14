@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
     <body>
@@ -50,11 +50,11 @@
                                     info@devstudio.com
                                     </a></li>
                             </ul>
-                            <ul>
-                                <li><a href="Instagram">Instagram</a></li>
-                                <li><a href="Twitter">Twitter</a></li>
-                                <li><a href="Facebook">Facebook</a></li>
-                                <li><a href="LinkedIn">LinkedIn</a></li>
+                            <ul class="mobile-links-ul">
+                                <li class="mobile-links"><a href="Instagram">Instagram</a></li>
+                                <li class="mobile-links"><a href="Twitter">Twitter</a></li>
+                                <li class="mobile-links"><a href="Facebook">Facebook</a></li>
+                                <li class="mobile-links"><a href="LinkedIn">LinkedIn</a></li>
                             </ul>
                         </div> 
 
@@ -349,51 +349,54 @@
     </section>
     <footer>
         <div class="footer-all">
-        <div class="container-footer">
-            <a class="logo-footer" href="/">
-                <span class="web-footer">Web</span><span class="studio-logo-footer">Studio</span>
-            </a>
-            <address class="address">
-                г. Киев, пр-т Леси Украинки, 26
-            </address>
-            <ul>
-                <li class="li-footer"><a class="mail-footer" href="info@devstudio.com">info@devstudio.com <br /></a></li>
-                <li class="li-footer"><a class="telephone-footer" href="+380961111111">+38 096 111 11 11</a></li>
-            </ul>
-        </div>
-        <div class="join-container">
-                <p class="join">присоединяйтесь</p>
-            <ul>
-                <li class="join-li">
-                    <a class="join-links" href="#" aria-label="instagram">
-                        <svg class="join-instagram">
-                            <use href="./img/symbol-defs.svg#icon-instagram"></use>
-                        </svg>
+            <div class="footer-tablet">
+                <div class="container-footer">
+                    <a class="logo-footer" href="/">
+                        <span class="web-footer">Web</span><span class="studio-logo-footer">Studio</span>
                     </a>
-                </li>
-                <li class="join-li">
-                    <a class="join-links" href="#" aria-label="twitter">
-                        <svg class="join-twitter">
-                            <use href="./img/symbol-defs.svg#icon-twitter"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="join-li">
-                    <a class="join-links" href="#" aria-label="facebook">
-                        <svg class="join-facebook">
-                            <use href="./img/symbol-defs.svg#icon-facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="join-li">
-                    <a class="join-links" href="#" aria-label="linkedin">
-                        <svg class="join-linkedin">
-                            <use href="./img/symbol-defs.svg#icon-linkedin"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
+                    <address class="address">
+                        г. Киев, пр-т Леси Украинки, 26
+                    </address>
+                    <ul>
+                        <li class="li-footer"><a class="mail-footer" href="info@devstudio.com">info@devstudio.com <br /></a></li>
+                        <li class="li-footer"><a class="telephone-footer" href="+380961111111">+38 096 111 11 11</a></li>
+                    </ul>
+                </div>
+                <div class="join-container">
+                    <p class="join">присоединяйтесь</p>
+                    <ul>
+                        <li class="join-li">
+                            <a class="join-links" href="#" aria-label="instagram">
+                                <svg class="join-instagram">
+                                    <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="join-li">
+                            <a class="join-links" href="#" aria-label="twitter">
+                                <svg class="join-twitter">
+                                    <use href="./img/symbol-defs.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="join-li">
+                            <a class="join-links" href="#" aria-label="facebook">
+                                <svg class="join-facebook">
+                                    <use href="./img/symbol-defs.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="join-li">
+                            <a class="join-links" href="#" aria-label="linkedin">
+                                <svg class="join-linkedin">
+                                    <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
         <div class="sub">
             <p class="subscribe__text">Подпишитесь на рассылку</p>
             <div class="subscribe-container">
@@ -409,7 +412,7 @@
                 </svg>
             </button>
             </div>
-        </div>
+        
         </div>
     </footer>
 
