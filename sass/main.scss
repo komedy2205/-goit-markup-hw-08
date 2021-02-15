@@ -56,30 +56,33 @@ ul {
 // Header
 
 .container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
   @media screen and (min-width: $mobile-width) {
     width: 480px;
-
-    margin-right: auto;
-    margin-left: auto;
   }
 
   @media screen and (min-width: $tablet-width) {
     width: 768px;
-
-    margin-right: auto;
-    margin-left: auto;
   }
 
   @media screen and (min-width: $desktop-width) {
     width: 1200px;
-
-    margin-right: auto;
-    margin-left: auto;
   }
 
   .header & {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+      justify-content: center;
+      width: 100%;
+      height: 60px;
+    }
   }
 
   & > nav {
@@ -93,7 +96,16 @@ ul {
   }
 }
 
+.navigation {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
 .webstudio {
+  width: 134px;
+  margin: 0px;
+
   @media screen and (min-width: $mobile-width) {
     display: inline-flex;
     width: 134px;
@@ -107,9 +119,19 @@ ul {
   }
 
   @media screen and (min-width: $tablet-width) {
+    height: auto;
+    margin-top: 0px;
+
     margin-right: 88px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-right: 93px;
+    margin-top: 0px;
+    padding-bottom: 32px;
+    padding-top: 32px;
   }
 
   color: $main-text-color;
@@ -125,6 +147,44 @@ ul {
 }
 
 .menu-button {
+  @media screen and (max-width: 479px) {
+    display: inline-flex;
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    top: 0;
+    right: 0;
+
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    & .icon-cross {
+      display: none;
+    }
+
+    &.is-open .icon-cross {
+      display: block;
+    }
+
+    &.is-open .icon-menu {
+      position: absolute;
+
+      display: none;
+    }
+
+    &-close {
+      position: absolute;
+
+      margin-top: 10px;
+      margin-left: 436px;
+      margin-bottom: 10px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
+  }
   @media screen and (min-width: $mobile-width) {
     display: inline-flex;
 
@@ -252,6 +312,22 @@ header {
 .link-studio,
 .link-portfolio,
 .link-contacts {
+  @media screen and (max-width: 479px) {
+    width: 100%;
+
+    color: $main-text-color;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    margin-left: 40px;
+
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
+
   @media screen and (min-width: $mobile-width) {
     width: 139px;
 
@@ -286,6 +362,13 @@ header {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  @media screen and (min-width: $desktop-width) {
+    align-items: center;
+
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
 }
 
 .link-portfolio:focus,
@@ -308,6 +391,22 @@ header {
 }
 
 .active {
+  @media screen and (max-width: 479px) {
+    width: 100%;
+
+    color: $sec-backgroundcolor;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    margin-left: 40px;
+
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
+
   @media screen and (min-width: $mobile-width) {
     width: 139px;
 
@@ -438,6 +537,18 @@ header {
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-bottom: 0px;
+
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $sec-backgroundcolor;
+    }
   }
 
   &-links-tablet {
@@ -477,7 +588,7 @@ header {
 .telephone {
   @media screen and (min-width: 0px) and (max-width: 767px) {
     display: block;
-    width: 296px;
+    width: 300px;
 
     font-weight: 500;
     font-size: 34px;
@@ -485,6 +596,7 @@ header {
     letter-spacing: 0.02em;
 
     margin-left: 40px;
+    margin-top: 306px;
 
     padding: 0px;
     color: $sec-backgroundcolor;
@@ -520,6 +632,7 @@ header {
   &-tablet {
     @media screen and (min-width: $tablet-width) {
       margin-left: 84px;
+      width: 100%;
 
       display: block;
       display: flex;
@@ -533,6 +646,20 @@ header {
       transition-property: color fill;
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @media screen and (min-width: $desktop-width) {
+      margin-left: 30px;
+      margin-bottom: 0px;
+      width: 142px;
+
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $sec-backgroundcolor;
     }
   }
 
@@ -572,6 +699,16 @@ header {
 // Backdrop-mobile
 
 .backdrop-mobile {
+  @media screen and (max-width: 479px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+
   @media screen and (min-width: $mobile-width) {
     position: fixed;
     top: 0;
@@ -579,7 +716,7 @@ header {
     right: 0;
     bottom: 0;
 
-    width: 480px;
+    width: 100%;
     height: 796px;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.2);
@@ -590,6 +727,19 @@ header {
 }
 
 .modal-mobile {
+  @media screen and (max-width: 479px) {
+    position: relative;
+
+    width: 100%;
+    height: 796px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: $main-backgroundcolor;
+  }
+
   @media screen and (min-width: $mobile-width) {
     position: relative;
 
@@ -756,6 +906,21 @@ header {
 // Hero
 
 .hero {
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    height: auto;
+    background-image: url("../img/Hero-mobile.jpg");
+    background-size: 100% auto;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      .hero {
+        background-image: url("../img/Hero-mobile@2x.jpg");
+      }
+    }
+  }
+
   @media screen and (min-width: $mobile-width) {
     width: 480px;
     height: 400px;
@@ -787,20 +952,10 @@ header {
   }
 
   @media screen and (min-width: $desktop-width) {
-    display: block;
     width: 1600px;
     height: 600px;
-
-    padding-top: 200px;
-    padding-bottom: 200px;
-
-    background-image: linear-gradient(
-        to top,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url("../img/Hero-desktop.jpg");
-    background-color: $hero-backgroundcolor;
+    background-image: url("../img/Hero-desktop.jpg");
+    background-size: 1600px 600px;
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -821,12 +976,30 @@ header {
 }
 
 .big-title {
+  display: block;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .first-title {
+  @media screen and (max-width: 479px) {
+    padding-top: 164px;
+    text-align: center;
+    margin-left: auto;
+    margin-bottom: 30px;
+
+    width: 100%;
+
+    color: $main-backgroundcolor;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
   @media screen and (min-width: $mobile-width) {
     padding-top: 164px;
     text-align: center;
@@ -859,7 +1032,7 @@ header {
 
   @media screen and (min-width: $desktop-width) {
     width: 696px;
-    padding-top: 0px;
+    padding-top: 200px;
 
     margin-left: auto;
     margin-right: auto;
@@ -876,6 +1049,22 @@ header {
 }
 
 .service-button {
+  @media screen and (max-width: 479px) {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    left: auto;
+    top: 430px;
+
+    border-radius: 4px;
+    border-color: $sec-backgroundcolor;
+
+    background-color: $sec-backgroundcolor;
+    color: $sec-text-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: block;
     margin: 0 auto;
@@ -938,6 +1127,13 @@ header {
     margin-right: 8px;
   }
 
+  @media screen and (max-width: 479px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-left: 15px;
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: flex;
     flex-wrap: wrap;
@@ -955,6 +1151,10 @@ header {
 }
 
 .but-active {
+  @media screen and (max-width: 479px) {
+    margin-bottom: 15px;
+  }
+
   @media screen and (min-width: $mobile-width) {
     margin-bottom: 15px;
   }
@@ -1176,6 +1376,12 @@ header {
 }
 
 .job {
+  @media screen and (max-width: 479px) {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: block;
     padding-left: 15px;
@@ -1202,13 +1408,20 @@ header {
 }
 
 .job-kind {
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
   @media screen and (min-width: $mobile-width) {
     width: 450px;
   }
 
   @media screen and (min-width: $tablet-width) {
     width: 354px;
-    margin: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+
+    justify-content: center;
   }
 
   border: 1px solid #eeeeee;
@@ -1217,6 +1430,11 @@ header {
   margin-bottom: 30px;
 
   &-overlay {
+    @media screen and (max-width: 479px) {
+      width: 100%;
+      height: auto;
+    }
+
     @media screen and (min-width: $mobile-width) {
       width: 100%;
       height: auto;
@@ -1234,6 +1452,22 @@ header {
 }
 
 .img-overlay::before {
+  @media screen and (max-width: 479px) {
+    position: absolute;
+    content: "";
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $sec-backgroundcolor;
+    opacity: 0;
+    transform: translateY(100%);
+    transition-property: transform opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   position: absolute;
   content: "";
 
@@ -1250,6 +1484,26 @@ header {
 }
 
 .text-overlink {
+  @media screen and (max-width: 479px) {
+    position: absolute;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+
+    transform: translateY(100%);
+    transition-property: transform opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    width: 100%;
+    height: auto;
+    top: 63px;
+    left: 24px;
+    color: $main-backgroundcolor;
+    opacity: 0;
+  }
   position: absolute;
 
   font-weight: 400;
@@ -1538,6 +1792,13 @@ header {
 }
 
 .clients {
+  @media screen and (max-width: 479px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: (100% / 2);
+    justify-content: center;
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: flex;
     flex-wrap: wrap;
@@ -1558,6 +1819,13 @@ header {
 }
 
 .clients-li {
+  @media screen and (max-width: 479px) {
+    margin-right: 15px;
+
+    margin-bottom: 30px;
+    width: 170px;
+  }
+
   @media screen and (min-width: $mobile-width) {
     margin-right: 15px;
 
@@ -1572,12 +1840,16 @@ header {
     width: 170px;
   }
 
+  @media screen and (min-width: $desktop-width) {
+    margin-right: 0px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
   display: flex;
   flex-wrap: wrap;
-  width: 480px;
   align-items: center;
-
-  margin-right: 30px;
 
   &:nth-child(1) .clients-logo {
     width: 44px;
@@ -1654,6 +1926,9 @@ header {
 footer {
   @media screen and (min-width: $desktop-width) {
     display: flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   background-color: $hero-backgroundcolor;
 
@@ -1661,6 +1936,18 @@ footer {
   padding-bottom: 60px;
 
   &-all {
+    @media screen and (max-width: 479px) {
+      margin-left: auto;
+      display: flex;
+      align-items: baseline;
+
+      width: 480px;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
     @media screen and (min-width: $mobile-width) {
       margin-left: auto;
       display: flex;
@@ -1688,12 +1975,23 @@ footer {
 
 .footer-tablet {
   @media screen and (min-width: $tablet-width) {
+    width: 100%;
+
     display: flex;
     justify-content: center;
   }
 }
 
 .container-footer {
+  @media screen and (max-width: 479px) {
+    display: block;
+    width: 252px;
+    justify-content: space-evenly;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: block;
     width: 252px;
@@ -1705,7 +2003,7 @@ footer {
   @media screen and (min-width: $desktop-width) {
     width: 231px;
     margin-right: 70px;
-    margin-left: 200px;
+    margin-left: 100px;
   }
 }
 
@@ -1717,6 +2015,15 @@ footer {
 }
 
 .li-footer {
+  @media screen and (max-width: 479px) {
+    display: block;
+    width: 232px;
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: block;
     width: 232px;
@@ -1725,15 +2032,33 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
+
+  @media screen and (min-width: $desktop-width) {
+    margin: 0px;
+    text-align: left;
+  }
 }
 
 .logo-footer {
+  @media screen and (max-width: 479px) {
+    display: block;
+    width: 154px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: block;
     width: 154px;
 
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 0px;
+    text-align: left;
   }
 
   padding-top: 0;
@@ -1748,6 +2073,14 @@ footer {
 }
 
 .address {
+  @media screen and (max-width: 479px) {
+    display: block;
+    width: 232px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: block;
     width: 232px;
@@ -1787,6 +2120,10 @@ footer {
 }
 
 .telephone-footer {
+  @media screen and (max-width: 479px) {
+    margin-bottom: 60px;
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: block;
     width: 232px;
@@ -1820,6 +2157,11 @@ footer {
 // Join-link__footer
 
 .join {
+  @media screen and (max-width: 479px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media screen and (min-width: $mobile-width) {
     margin-left: auto;
     margin-right: auto;
@@ -1837,6 +2179,16 @@ footer {
   margin-bottom: 20px;
 
   &-container {
+    @media screen and (max-width: 479px) {
+      display: block;
+      width: 206px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      margin-bottom: 60px;
+    }
+
     @media screen and (min-width: $mobile-width) {
       display: block;
       width: 206px;
@@ -1949,6 +2301,25 @@ footer {
 }
 
 .subscribe__text {
+  @media screen and (max-width: 479px) {
+    display: block;
+    width: 219px;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 20px;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $sec-text-color;
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: block;
     width: 219px;
@@ -1967,6 +2338,7 @@ footer {
     text-transform: uppercase;
     color: $sec-text-color;
   }
+
   @media screen and (min-width: $desktop-width) {
     font-weight: bold;
     font-size: 14px;
@@ -1984,6 +2356,24 @@ footer {
 }
 
 .subscribe-form {
+  @media screen and (max-width: 479px) {
+    display: block;
+    width: 450px;
+    justify-content: center;
+
+    width: 358px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: $hero-backgroundcolor;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: $main-backgroundcolor;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 20px;
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: block;
     width: 450px;
@@ -2001,6 +2391,7 @@ footer {
 
     margin-bottom: 20px;
   }
+
   @media screen and (min-width: $desktop-width) {
     width: 358px;
     height: 50px;
@@ -2015,6 +2406,23 @@ footer {
 }
 
 .subscribe-button {
+  @media screen and (max-width: 479px) {
+    display: block;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    border-radius: 4px;
+    border-color: $sec-backgroundcolor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    background-color: $sec-backgroundcolor;
+  }
+
   @media screen and (min-width: $mobile-width) {
     display: block;
     justify-content: center;
