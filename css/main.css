@@ -89,7 +89,7 @@ ul {
 }
 
 .navigation {
-  display: block;
+  display: flex;
   width: 100%;
   height: 60px;
 }
@@ -496,6 +496,7 @@ header {
 @media screen and (min-width: 768px) {
   .mail-tablet {
     margin-left: 84px;
+    margin-top: 20px;
     display: block;
     display: flex;
     align-items: center;
@@ -1051,6 +1052,10 @@ header {
   padding-bottom: 94px;
 }
 
+.buttons-list {
+  justify-content: center;
+}
+
 .buttons-list > li:not(:last-child) {
   margin-right: 8px;
 }
@@ -1122,6 +1127,7 @@ header {
 .our-description {
   display: flex;
   padding-top: 94px;
+  padding-bottom: 20px;
 }
 
 .our-description p {
@@ -1531,6 +1537,7 @@ header {
   background-color: #f5f4fa;
   padding-top: 94px;
   padding-bottom: 94px;
+  padding-left: 15px;
 }
 
 .team-img {
@@ -1582,7 +1589,7 @@ header {
 @media screen and (min-width: 768px) {
   .team-li {
     margin-right: 15px;
-    margin-left: 15px;
+    margin-left: px;
     margin-bottom: 30px;
     width: 354px;
   }
